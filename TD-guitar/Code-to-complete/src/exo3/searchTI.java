@@ -6,6 +6,8 @@ import java.util.List;
 
 import org.junit.*;
 
+import exo4.FindGuitarTester;
+
 
 public class searchTI {
 
