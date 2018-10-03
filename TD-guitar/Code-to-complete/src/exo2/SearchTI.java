@@ -1,4 +1,4 @@
-package exo4;
+package exo2;
 
 import static org.junit.Assert.*;
 
@@ -7,7 +7,7 @@ import java.util.List;
 import org.junit.*;
 
 
-public class searchTI {
+public class SearchTI {
 
 	private static Inventory inventory;
 	
@@ -19,7 +19,8 @@ public class searchTI {
 
 	@Test
 	public void testSpecificGuitar() {
-	    GuitarSpec whatCustomerWant = new GuitarSpec(Builder.FENDER, "Stratocastor", Type.ELECTRIC, 6, Wood.ALDER, Wood.ALDER);
+	    Guitar whatCustomerWant = new Guitar("", 0, Builder.FENDER, "Stratocastor", 
+	                                      Type.ELECTRIC, Wood.ALDER, Wood.ALDER);
 	    List matchingGuitars = inventory.search(whatCustomerWant);
 	    
 	    Assert.assertNotNull(matchingGuitars);
@@ -28,7 +29,8 @@ public class searchTI {
 	
 	@Test
 	public void testElectricGuitar() {
-		GuitarSpec whatCustomerWant = new GuitarSpec(null, "", Type.ELECTRIC, GuitarSpec.NO_PREF_NUM_STRINGS, null, null);
+	    Guitar whatCustomerWant = new Guitar("", 0, null, "", 
+	                                      Type.ELECTRIC, null, null);
 	    List matchingGuitars = inventory.search(whatCustomerWant);
 	    
 	    Assert.assertNotNull(matchingGuitars);
@@ -37,7 +39,8 @@ public class searchTI {
 	
 	@Test
 	public void testAcousticGuitar() {
-		GuitarSpec whatCustomerWant = new GuitarSpec( null, null, Type.ACOUSTIC, GuitarSpec.NO_PREF_NUM_STRINGS, null, null);
+	    Guitar whatCustomerWant = new Guitar("", 0, null, null, 
+	                                      Type.ACOUSTIC, null, null);
 	    List matchingGuitars = inventory.search(whatCustomerWant);
 	    
 	    Assert.assertNotNull(matchingGuitars);
@@ -46,29 +49,12 @@ public class searchTI {
 	
 	@Test
 	public void testNoMachingGuitar() {
-		GuitarSpec whatCustomerWant = new GuitarSpec(Builder.COLLINGS, null, Type.ACOUSTIC, 12, null, Wood.BRAZILIAN_ROSEWOOD);
+	    Guitar whatCustomerWant = new Guitar("", 0, Builder.COLLINGS, null, 
+	                                      Type.ACOUSTIC, null, Wood.BRAZILIAN_ROSEWOOD);
 	    List matchingGuitars = inventory.search(whatCustomerWant);
 	    
 	    Assert.assertNotNull(matchingGuitars);
 	    Assert.assertTrue(matchingGuitars.isEmpty());    
-	}
-	
-	@Test
-	public void testMachingGuitarWith12strings() {
-		GuitarSpec whatCustomerWant = new GuitarSpec(null, null, null, 12, null, null);
-	    List matchingGuitars = inventory.search(whatCustomerWant);
-	    
-	    Assert.assertNotNull(matchingGuitars);
-	    Assert.assertEquals(2, matchingGuitars.size());      
-	}
-	
-	@Test
-	public void testMachingGuitarWith6strings() {
-		GuitarSpec whatCustomerWant = new GuitarSpec(null, null, null, 6, null, null);
-	    List matchingGuitars = inventory.search(whatCustomerWant);
-	    
-	    Assert.assertNotNull(matchingGuitars);
-	    Assert.assertEquals(9, matchingGuitars.size());      
 	}
 
 }

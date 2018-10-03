@@ -7,7 +7,7 @@ import java.util.List;
 import org.junit.*;
 
 
-public class searchTI {
+public class SearchTI {
 
 	private static Inventory inventory;
 	
