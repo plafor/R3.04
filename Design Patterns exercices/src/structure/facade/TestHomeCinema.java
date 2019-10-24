@@ -13,9 +13,23 @@ public class TestHomeCinema {
 		Lumieres lumieres = new Lumieres();
 		MachineAPopcorn machineAPopCorn = new MachineAPopcorn();
 		
-		FacadeHomeCinema homeCinema = null;
+		machineAPopCorn.marche();
+		machineAPopCorn.eclater();
+		lumieres.attenuer(10);
+		ecran.baisser();
+		projecteur.marche();
+		projecteur.setEntree(dvd);
+		projecteur.modeGrandEcran();
+		amp.marche();
+		amp.setDvd(dvd);
+		amp.setSonSurround();
+		amp.setVolume(5);
+		dvd.marche();
+		dvd.jouer("The Joker");
+		
+		//FacadeHomeCinema homeCinema = null;
 
-		homeCinema.regarderFilm("Edge of tomorrow");
-		homeCinema.arreterFilm(); 
+		//homeCinema.regarderFilm("Edge of tomorrow");
+		//homeCinema.arreterFilm(); 
 	}
 }

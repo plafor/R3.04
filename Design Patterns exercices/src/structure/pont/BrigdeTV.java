@@ -4,7 +4,12 @@ public class BrigdeTV {
 
 	public static void main(String[] args) {
 		
-		//TODO: complete
+		AbstractRemoteControl telecommande = new LogitechRemoteControl(new SonyTV());
+		
+		telecommande.turnOn();
+		telecommande.setChannel(1);
+		telecommande.setChannel(2);
+		telecommande.turnOff();
 
 	}
 

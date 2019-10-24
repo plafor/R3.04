@@ -1,6 +1,7 @@
 package structure.pont;
 
 public class LogitechRemoteControl extends AbstractRemoteControl {
+	
 	public LogitechRemoteControl(ITV tv) {
 		super(tv);
 	}

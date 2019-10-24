@@ -1,12 +1,17 @@
 package structure.pont;
 
 public abstract class AbstractRemoteControl {
+	
 	private ITV tv;
 
 	public AbstractRemoteControl(ITV tv) {
 		this.tv = tv;
 	}
 
+	public void setTv(ITV tv) {
+		this.tv = tv;
+	}
+	
 	public void turnOn() {
 		tv.on();
 	}

@@ -15,4 +15,8 @@ public class Projecteur {
 		System.out.println("Projecteur en mode Grand Ecran");
 	}
 
+	public void setEntree(Source source) {
+		System.out.println("Source changee pour le " + source);
+	}
+
 }

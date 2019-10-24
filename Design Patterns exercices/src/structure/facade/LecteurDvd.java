@@ -1,6 +1,6 @@
 package structure.facade;
 
-public class LecteurDvd {
+public class LecteurDvd implements Source {
 
 	public void marche() {
 		System.out.println("DVD ON");
