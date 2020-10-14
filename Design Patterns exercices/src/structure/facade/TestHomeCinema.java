@@ -26,10 +26,5 @@ public class TestHomeCinema {
 		amp.setVolume(5);
 		dvd.marche();
 		dvd.jouer("The Joker");
-		
-		//FacadeHomeCinema homeCinema = null;
-
-		//homeCinema.regarderFilm("Edge of tomorrow");
-		//homeCinema.arreterFilm(); 
 	}
 }

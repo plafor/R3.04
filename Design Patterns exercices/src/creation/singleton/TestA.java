@@ -4,7 +4,7 @@ public class TestA {
 
 	public static void main(String[] args) {
 
-		A unA = A.getInstance();
+		A unA = new A();
 		unA.methode();
 	}
 }

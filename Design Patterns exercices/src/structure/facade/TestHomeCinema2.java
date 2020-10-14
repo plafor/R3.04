@@ -13,9 +13,9 @@ public class TestHomeCinema2 {
 		Lumieres lumieres = new Lumieres();
 		MachineAPopcorn machineAPopCorn = new MachineAPopcorn();
 		
-		FacadeHomeCinema homeCinema = new FacadeHomeCinema(amp, tuner, dvd, cd, projecteur, ecran, lumieres, machineAPopCorn);
+		FacadeHomeCinema homeCinema = //TODO
 
-		homeCinema.regarderFilm("Edge of tomorrow");
+		homeCinema.regarderFilm("The Joker");
 		homeCinema.arreterFilm(); 
 	}
 }
