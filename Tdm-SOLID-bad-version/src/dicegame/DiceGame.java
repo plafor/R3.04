@@ -39,7 +39,7 @@ public class DiceGame implements IDiceGame{
 	@Override
 	public int getRandomDiceValue() {
 		if (dice instanceof DiceWith6Faces)
-			return dice.getRandomValueFrom1To6();
+			return dice.getRandomValue();
 		else 
 			return ((DiceWith8Faces)dice).getRandomValueFrom1To8();
 	}
