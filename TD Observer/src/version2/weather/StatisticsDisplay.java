@@ -1,4 +1,7 @@
-package version1.weather;
+package version2.weather;
+
+import java.util.Observable;
+import java.util.Observer;
 
 public class StatisticsDisplay implements Observer, Displayer {
 	private float maxTemp = 0.0f;
@@ -8,10 +11,11 @@ public class StatisticsDisplay implements Observer, Displayer {
 	//TODO:
 
 	public StatisticsDisplay(WeatherData weatherData) {
-		weatherData.registerObserver(this);
+		weatherData.addObserver(this);
 	}
 
-	public void update(float temp, float humidity, float pressure) {
+	public void update(Observable observable, Object arg) {
+		float temp = ((Float) arg).floatValue();
 		tempSum += temp;
 		numReadings++;
 

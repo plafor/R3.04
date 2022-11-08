@@ -1,4 +1,4 @@
-package version1.weather;
+package version2.weather;
 
 public class WeatherStation {
 

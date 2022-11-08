@@ -9,10 +9,11 @@ import java.util.Vector;
 public class Customer {
 
 	private String name;
-	private List<Rental> rentals = new ArrayList<>();
+	private List<Rental> rentals;
 
 	public Customer (String name){ 
 		this.name = name;
+		rentals = new ArrayList<>();
 	}
 
 	public void addRental(Rental aRental) { 
